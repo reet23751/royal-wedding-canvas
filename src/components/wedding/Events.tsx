@@ -1,25 +1,24 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const EVENTS = [
-  { title: "Aiburo Bhaat", bn: "আইবুড়ো ভাত", date: "10 Feb · 1:00 PM", venue: "Bride's Home", dress: "Yellow Traditional" },
-  { title: "Gaye Holud", bn: "গায়ে হলুদ", date: "11 Feb · 10:00 AM", venue: "Family Courtyard", dress: "Yellow & White" },
-  { title: "Sangeet", bn: "সঙ্গীত সন্ধ্যা", date: "11 Feb · 7:00 PM", venue: "The Glasshouse", dress: "Festive Wear" },
-  { title: "Biye", bn: "বিয়ে", date: "12 Feb · 6:00 PM", venue: "Jorasanko Thakur Bari", dress: "Bengali Traditional" },
-  { title: "Bou Bhaat", bn: "বৌভাত", date: "14 Feb · 12:30 PM", venue: "Groom's Residence", dress: "Formal Indian" },
-  { title: "Reception", bn: "প্রীতিভোজ", date: "14 Feb · 7:30 PM", venue: "ITC Royal Bengal", dress: "Black Tie · Indian" },
-];
+import { useLanguage } from "@/hooks/useLanguage";
 
 export function Events() {
+  const { t, getEvents } = useLanguage();
+  const events = getEvents();
   const [open, setOpen] = useState<number | null>(0);
+
   return (
     <section className="px-5 py-12">
-      <p className="text-center font-bengali text-sm text-vermillion">উৎসবের অনুষ্ঠানসমূহ</p>
-      <h2 className="mt-1 text-center font-display text-3xl">Wedding Rituals</h2>
+      <p className="text-center font-bengali text-sm text-vermillion">
+        {t("events.sub")}
+      </p>
+      <h2 className="mt-1 text-center font-display text-3xl">
+        {t("events.title")}
+      </h2>
       <div className="alpana-border mx-auto mt-4 h-px w-1/2 opacity-60" />
 
       <ol className="relative mt-8 space-y-3 before:absolute before:left-4 before:top-2 before:bottom-2 before:w-px before:bg-gold/40">
-        {EVENTS.map((e, i) => {
+        {events.map((e, i) => {
           const isOpen = open === i;
           return (
             <li key={e.title} className="relative pl-12">
@@ -29,7 +28,7 @@ export function Events() {
               <motion.button
                 layout
                 onClick={() => setOpen(isOpen ? null : i)}
-                className="block w-full overflow-hidden rounded-xl border border-gold/30 bg-card text-left shadow-soft"
+                className="block w-full overflow-hidden rounded-xl border border-gold/30 bg-card text-left shadow-soft hover:border-gold/60 transition-colors"
               >
                 <div className="flex items-center justify-between px-4 py-3">
                   <div>
@@ -45,16 +44,16 @@ export function Events() {
                     transition={{ duration: 0.35 }}
                     className="border-t border-gold/20 bg-secondary/40 px-4 py-3 text-sm"
                   >
-                    <Row label="When" value={e.date} />
-                    <Row label="Where" value={e.venue} />
-                    <Row label="Attire" value={e.dress} />
+                    <Row label={t("events.when")} value={e.date} />
+                    <Row label={t("events.where")} value={e.venue} />
+                    <Row label={t("events.attire")} value={e.dress} />
                     <a
                       href={`https://maps.google.com/?q=${encodeURIComponent(e.venue)}`}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-2 inline-block text-xs font-semibold uppercase tracking-widest text-vermillion underline-offset-4 hover:underline"
                     >
-                      Open in Maps →
+                      {t("events.openMaps")}
                     </a>
                   </motion.div>
                 )}
