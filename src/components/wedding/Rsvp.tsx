@@ -160,20 +160,12 @@ export function Rsvp({ guestName, accepted = false, onAccept }: RsvpProps) {
 
           <div className="alpana-border mx-auto my-6 h-px w-2/3 opacity-60" />
 
-          <div className="grid grid-cols-2 gap-3 text-sm">
-            <a
-              href="https://wa.me/?text=Join%20us%20at%20Arnab%20weds%20Rohini"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl border border-gold/40 px-3 py-2 font-medium text-foreground hover:bg-secondary"
-            >
-              {t("rsvp.whatsapp")}
-            </a>
+          <div className="flex justify-center gap-3 text-sm">
             <a
               href="https://maps.google.com/?q=Jorasanko+Thakur+Bari+Kolkata"
               target="_blank"
               rel="noreferrer"
-              className="rounded-xl border border-gold/40 px-3 py-2 font-medium text-foreground hover:bg-secondary"
+              className="rounded-xl border border-gold/40 px-6 py-2 font-medium text-foreground hover:bg-secondary transition"
             >
               {t("rsvp.openVenue")}
             </a>
