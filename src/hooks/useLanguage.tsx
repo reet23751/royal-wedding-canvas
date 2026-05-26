@@ -22,6 +22,7 @@ export interface FamilyMember {
   relation: string;
   desc: string;
   initials: string;
+  photo: string;
 }
 
 export interface FamilySide {
@@ -63,7 +64,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "boardingPass.to": "To",
     "boardingPass.shubhoBibaho": "Shubho Bibaho",
     "boardingPass.date": "Date",
-    "boardingPass.dateValue": "12 · Feb",
+    "boardingPass.dateValue": "07 · Feb",
     "boardingPass.gate": "Gate",
     "boardingPass.seat": "Seat",
     "boardingPass.stubFooter": "Begin your journey into the sky",
@@ -104,6 +105,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "events.where": "Where",
     "events.attire": "Attire",
     "events.openMaps": "Open in Maps →",
+    "events.tapToView": "Tap to view details",
 
     // RSVP
     "rsvp.sub": "Your Presence",
@@ -150,7 +152,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "boardingPass.to": "গন্তব্য",
     "boardingPass.shubhoBibaho": "শুভ বিবাহ",
     "boardingPass.date": "তারিখ",
-    "boardingPass.dateValue": "১২ · ফেব্রুয়ারি",
+    "boardingPass.dateValue": "০৭ · ফেব্রুয়ারি",
     "boardingPass.gate": "গেট",
     "boardingPass.seat": "আসন",
     "boardingPass.stubFooter": "আকাশপথে যাত্রা শুরু করুন",
@@ -191,6 +193,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "events.where": "কোথায়",
     "events.attire": "পোশাক",
     "events.openMaps": "ম্যাপে দেখুন →",
+    "events.tapToView": "বিস্তারিত দেখতে স্পর্শ করুন",
 
     // RSVP
     "rsvp.sub": "আপনার উপস্থিতি",
@@ -237,7 +240,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "boardingPass.to": "गंतव्य",
     "boardingPass.shubhoBibaho": "शुभ विवाह",
     "boardingPass.date": "दिनांक",
-    "boardingPass.dateValue": "12 · फ़र",
+    "boardingPass.dateValue": "07 · फ़र",
     "boardingPass.gate": "द्वार",
     "boardingPass.seat": "स्थान",
     "boardingPass.stubFooter": "आकाश मार्ग से यात्रा शुरू करें",
@@ -278,6 +281,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "events.where": "कहाँ",
     "events.attire": "पोशाक",
     "events.openMaps": "मानचित्र में खोलें →",
+    "events.tapToView": "विवरण देखने के लिए स्पर्श करें",
 
     // RSVP
     "rsvp.sub": "आपकी उपस्थिति",
@@ -324,7 +328,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "boardingPass.to": "To",
     "boardingPass.shubhoBibaho": "Shubho Bibaho",
     "boardingPass.date": "Date",
-    "boardingPass.dateValue": "12 · Feb",
+    "boardingPass.dateValue": "07 · Feb",
     "boardingPass.gate": "Gate",
     "boardingPass.seat": "Seat",
     "boardingPass.stubFooter": "Chalo flight board karein!",
@@ -365,6 +369,7 @@ const TRANSLATIONS: Record<Language, Record<string, string>> = {
     "events.where": "Where",
     "events.attire": "Attire",
     "events.openMaps": "Open in Maps →",
+    "events.tapToView": "Tap to view details",
 
     // RSVP
     "rsvp.sub": "Aapki Presence",
@@ -545,17 +550,23 @@ const FAMILY_DATA: Record<Language, FamilyData> = {
     bride: {
       title: "Bride's Family",
       members: [
-        { name: "Samar Sen", relation: "Father", desc: "The guiding pillar of Rohini's life, always radiating wisdom and unconditional love.", initials: "SS" },
-        { name: "Sunanda Sen", relation: "Mother", desc: "The warm heart of the home whose love and culinary magic bind the family together.", initials: "SS" },
-        { name: "Sayantani Sen", relation: "Sister", desc: "Rohini's best friend and confidante, adding spark and color to every ceremony.", initials: "SS" }
+        { name: "Samar Sen", relation: "Father", desc: "The guiding pillar of Rohini's life, always radiating wisdom and unconditional love.", initials: "SS", photo: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Sunanda Sen", relation: "Mother", desc: "The warm heart of the home whose love and culinary magic bind the family together.", initials: "SS", photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Sayantani Sen", relation: "Sister", desc: "Rohini's best friend and confidante, adding spark and color to every ceremony.", initials: "SS", photo: "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Amit Sen", relation: "Uncle", desc: "The fun-loving uncle who ensures the music never stops and everyone is on the dance floor.", initials: "AS", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Minati Sen", relation: "Grandmother", desc: "The keeper of age-old traditions and family recipes, blessing everyone with her warm smile.", initials: "MS", photo: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Joydeep Sen", relation: "Cousin", desc: "The tech-savvy cousin who is capture-ready with his camera, making sure every memory is preserved.", initials: "JS", photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     },
     groom: {
       title: "Groom's Family",
       members: [
-        { name: "Dipak Roy", relation: "Father", desc: "Arnab's strength and inspiration, leading with patience and a warm smile.", initials: "DR" },
-        { name: "Krishna Roy", relation: "Mother", desc: "The sweetest soul who fills the house with joy, music, and divine blessings.", initials: "KR" },
-        { name: "Anirban Roy", relation: "Brother", desc: "The dynamic brother, managing the chaos of the big day with flawless ease.", initials: "AR" }
+        { name: "Dipak Roy", relation: "Father", desc: "Arnab's strength and inspiration, leading with patience and a warm smile.", initials: "DR", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Krishna Roy", relation: "Mother", desc: "The sweetest soul who fills the house with joy, music, and divine blessings.", initials: "KR", photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Anirban Roy", relation: "Brother", desc: "The dynamic brother, managing the chaos of the big day with flawless ease.", initials: "AR", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Shreya Roy", relation: "Sister-in-law", desc: "The lovely bhabhi who brings charm, warmth, and beautiful designs to the family.", initials: "SR", photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Bimal Roy", relation: "Grandfather", desc: "The family patriarch whose stories of yesteryears and hearty laughter fill the house with joy.", initials: "BR", photo: "https://images.unsplash.com/photo-1489980508314-941910ded1f4?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Riya Roy", relation: "Cousin", desc: "The energetic coordinator who keeps the schedules running and manages the sangeet rehearsals.", initials: "RR", photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     }
   },
@@ -565,17 +576,23 @@ const FAMILY_DATA: Record<Language, FamilyData> = {
     bride: {
       title: "কনের পরিবার",
       members: [
-        { name: "সমর সেন", relation: "বাবা", desc: "রোহিণীর জীবনের পথপ্রদর্শক, যিনি সর্বদা স্নেহ ও জ্ঞানে আমাদের পরিচালিত করেন।", initials: "স" },
-        { name: "সুনন্দা সেন", relation: "মা", desc: "পরিবারের স্নেহের আধার, যাঁর হাতের সুস্বাদু রান্না আর ভালবাসা আমাদের বেঁধে রাখে।", initials: "সু" },
-        { name: "সায়ন্তনী সেন", relation: "বোন", desc: "রোহিণীর প্রিয় বন্ধু ও সহচরী, প্রতিটি অনুষ্ঠানে আনন্দের রং ছড়িয়ে দিচ্ছেন।", initials: "সা" }
+        { name: "সমর সেন", relation: "বাবা", desc: "রোহিণীর জীবনের পথপ্রদর্শক, যিনি সর্বদা স্নেহ ও জ্ঞানে আমাদের পরিচালিত করেন।", initials: "স", photo: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "সুনন্দা সেন", relation: "মা", desc: "পরিবারের স্নেহের আধার, যাঁর হাতের সুস্বাদু রান্না আর ভালবাসা আমাদের বেঁধে রাখে।", initials: "সু", photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "সায়ন্তনী সেন", relation: "বোন", desc: "রোহিণীর প্রিয় বন্ধু ও সহচরী, প্রতিটি অনুষ্ঠানে আনন্দের রং ছড়িয়ে দিচ্ছেন।", initials: "সা", photo: "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "অমিত সেন", relation: "কাকা", desc: "আমুদে কাকা, যিনি নিশ্চিত করেন যে গান কখনো থামবে না এবং সবাই যেন ডান্স ফ্লোরে থাকে।", initials: "অ", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "মিনতি সেন", relation: "ঠাকুমা", desc: "বহু বছরের ঐতিহ্য ও পারিবারিক রান্নার রহস্যের রক্ষক, যাঁর মিষ্টি হাসি সবাইকে আশীর্বাদ করে।", initials: "মি", photo: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "জয়দীপ সেন", relation: "ভাই", desc: "প্রযুক্তি-প্রেমী ভাই, যে সবসময় তার ক্যামেরা নিয়ে প্রস্তুত থাকে যাতে প্রতিটি স্মৃতি ধরে রাখা যায়।", initials: "জ", photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     },
     groom: {
       title: "বরের পরিবার",
       members: [
-        { name: "দীপক রায়", relation: "বাবা", desc: "অর্ণবের অনুপ্রেরণা ও শক্তি, যিনি সর্বদা ধৈর্য আর হাসিমুখে আমাদের আগলে রাখেন।", initials: "দী" },
-        { name: "কৃষ্ণা রায়", relation: "মা", desc: "অত্যন্ত স্নেহময়ী এক প্রাণ, যাঁর উপস্থিতি ঘরটিকে সুখ, সুর ও আশীর্বাদে ভরিয়ে দেয়।", initials: "কৃ" },
-        { name: "অনির্বাণ রায়", relation: "ভাই", desc: "বরের প্রাণবন্ত ভাই, যিনি উৎসবের সমস্ত কাজ হাসিমুখে নিপুণভাবে সামলাচ্ছেন।", initials: "অ" }
+        { name: "দীপক রায়", relation: "বাবা", desc: "অর্ণবের অনুপ্রেরণা ও শক্তি, যিনি সর্বদা ধৈর্য আর হাসিমুখে আমাদের আগলে রাখেন।", initials: "দী", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "কৃষ্ণা রায়", relation: "মা", desc: "অত্যন্ত স্নেহময়ী এক প্রাণ, যাঁর উপস্থিতি ঘরটিকে সুখ, সুর ও আশীর্বাদে ভরিয়ে দেয়।", initials: "কৃ", photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "অনির্বাণ রায়", relation: "ভাই", desc: "বরের প্রাণবন্ত ভাই, যিনি উৎসবের সমস্ত কাজ হাসিমুখে নিপুণভাবে সামলাচ্ছেন।", initials: "অ", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "শ্রেয়া রায়", relation: "বৌদি", desc: "মিষ্টি বৌদি, যিনি পরিবারে সুন্দর নকশা, আন্তরিকতা আর আকর্ষণ নিয়ে এসেছেন।", initials: "শ্র", photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "বিমল রায়", relation: "দাদু", desc: "পরিবারের অভিভাবক, যাঁর অতীতের গল্প আর প্রাণখোলা হাসি পুরো বাড়িকে আনন্দে ভরিয়ে রাখে।", initials: "বি", photo: "https://images.unsplash.com/photo-1489980508314-941910ded1f4?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "রিয়া রায়", relation: "বোন", desc: "সবসময় চনমনে বোন, যে অনুষ্ঠানের সময়সূচি বজায় রাখে এবং সঙ্গীত মহড়া তদারকি করে।", initials: "রি", photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     }
   },
@@ -585,17 +602,23 @@ const FAMILY_DATA: Record<Language, FamilyData> = {
     bride: {
       title: "दुल्हन का परिवार",
       members: [
-        { name: "समर सेन", relation: "पिता", desc: "रोहिणी के जीवन के मार्गदर्शक स्तंभ, जो हमेशा ज्ञान और प्रेम बिखेरते हैं।", initials: "स" },
-        { name: "सुनंदा सेन", relation: "माता", desc: "परिवार का स्नेहमयी हृदय, जिनका प्रेम और रसोई का जादू सबको बांधे रखता है।", initials: "सु" },
-        { name: "सायंतनी सेन", relation: "बहन", desc: "रोहिणी की सबसे अच्छी सहेली और विश्वासपात्र, जो शादी के हर उत्सव में रंग भर रही हैं।", initials: "सा" }
+        { name: "समर सेन", relation: "पिता", desc: "रोहिणी के जीवन के मार्गदर्शक स्तंभ, जो हमेशा ज्ञान और प्रेम बिखेरते हैं।", initials: "स", photo: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "सुनंदा सेन", relation: "माता", desc: "परिवार का स्नेहमयी हृदय, जिनका प्रेम और रसोई का जादू सबको बांधे रखता है।", initials: "सु", photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "सायंतनी सेन", relation: "बहन", desc: "रोहिणी की सबसे अच्छी सहेली और विश्वासपात्र, जो शादी के हर उत्सव में रंग भर रही हैं।", initials: "सा", photo: "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "अमित सेन", relation: "चाचा", desc: "मस्ती-पसंद चाचा, जो यह सुनिश्चित करते हैं कि संगीत कभी न रुके और हर कोई डांस फ्लोर पर हो।", initials: "अ", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "मिनती सेन", relation: "दादी", desc: "सदियों पुरानी परंपराओं और पारिवारिक व्यंजनों की रक्षक, जो सबको अपनी प्यारी मुस्कान से आशीर्वाद देती हैं।", initials: "मि", photo: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "जयदीप सेन", relation: "भाई", desc: "तकनीक-प्रेमी भाई जो हमेशा कैमरे के साथ तैयार रहते हैं, ताकि हर याद को सहेजा जा सके।", initials: "ज", photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     },
     groom: {
       title: "दूल्हे का परिवार",
       members: [
-        { name: "दीपक रॉय", relation: "पिता", desc: "अर्णब की ताकत और प्रेरणा, जो हमेशा धैर्य और मुस्कान के साथ राह दिखाते हैं।", initials: "दी" },
-        { name: "कृष्णा रॉय", relation: "माता", desc: "एक अत्यंत स्नेहमयी आत्मा जो घर को खुशियों, संगीत और दिव्य आशीर्वाद से भर देती हैं।", initials: "कृ" },
-        { name: "अनिर्बान रॉय", relation: "भाई", desc: "दूल्हे के ऊर्जावान भाई, जो शादी की सभी व्यवस्थाओं को बड़ी ही सहजता से संभाल रहे हैं।", initials: "अ" }
+        { name: "दीपक रॉय", relation: "पिता", desc: "अर्णब की ताकत and प्रेरणा, जो हमेशा धैर्य and मुस्कान के साथ राह दिखाते हैं।", initials: "दी", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "कृष्णा रॉय", relation: "माता", desc: "एक अत्यंत स्नेहमयी आत्मा जो घर को खुशियों, संगीत and दिव्य आशीर्वाद से भर देती हैं।", initials: "कृ", photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "अनिर्बान रॉय", relation: "भाई", desc: "दूल्हे के ऊर्जावान भाई, जो शादी की सभी व्यवस्थाओं को बड़ी ही सहजता से संभाल रहे हैं।", initials: "अ", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "श्रेया रॉय", relation: "भाभी", desc: "प्यारी भाभी जो परिवार में आकर्षण, गर्मजोशी and सुंदर डिजाइन लाती हैं।", initials: "श्र", photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "बिमल रॉय", relation: "दादा", desc: "परिवार के मुखिया जिनकी पुरानी कहानियाँ and दिलकश हँसी घर को खुशियों से भर देती है।", initials: "बि", photo: "https://images.unsplash.com/photo-1489980508314-941910ded1f4?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "रिया रॉय", relation: "बहन", desc: "ऊर्जावान बहन जो कार्यक्रमों के समय का ध्यान रखती हैं and संगीत के रिहर्सल को संभालती हैं।", initials: "रि", photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     }
   },
@@ -605,17 +628,23 @@ const FAMILY_DATA: Record<Language, FamilyData> = {
     bride: {
       title: "Bride's Family",
       members: [
-        { name: "Samar Sen", relation: "Father / Papa", desc: "The guiding pillar of Rohini's life, always radiating wisdom and unconditional love.", initials: "SS" },
-        { name: "Sunanda Sen", relation: "Mother / Mummy", desc: "The warm heart of the home whose love and culinary magic bind the family together.", initials: "SS" },
-        { name: "Sayantani Sen", relation: "Sister / Didi", desc: "Rohini's best friend and confidante, adding spark and color to every ceremony.", initials: "SS" }
+        { name: "Samar Sen", relation: "Father / Papa", desc: "The guiding pillar of Rohini's life, always radiating wisdom and unconditional love.", initials: "SS", photo: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Sunanda Sen", relation: "Mother / Mummy", desc: "The warm heart of the home whose love and culinary magic bind the family together.", initials: "SS", photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Sayantani Sen", relation: "Sister / Didi", desc: "Rohini's best friend and confidante, adding spark and color to every ceremony.", initials: "SS", photo: "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Amit Sen", relation: "Uncle / Chacha", desc: "The fun-loving uncle jo music kabhi rukne nahi dete aur sabko nachate hain.", initials: "AS", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Minati Sen", relation: "Dadi", desc: "Age-old traditions aur recipes ki protector, sabko apni pyari smile se bless karne wali.", initials: "MS", photo: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Joydeep Sen", relation: "Cousin / Bhai", desc: "Humara tech-savvy cousin jo hamesha camera ke saath ready rehta hai memories capture karne ke liye.", initials: "JS", photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     },
     groom: {
       title: "Groom's Family",
       members: [
-        { name: "Dipak Roy", relation: "Father / Papa", desc: "Arnab's strength and inspiration, leading with patience and a warm smile.", initials: "DR" },
-        { name: "Krishna Roy", relation: "Mother / Mummy", desc: "The sweetest soul who fills the house with joy, music, and divine blessings.", initials: "KR" },
-        { name: "Anirban Roy", relation: "Brother / Bhaiya", desc: "The dynamic brother, managing the chaos of the big day with flawless ease.", initials: "AR" }
+        { name: "Dipak Roy", relation: "Father / Papa", desc: "Arnab's strength and inspiration, leading with patience and a warm smile.", initials: "DR", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Krishna Roy", relation: "Mother / Mummy", desc: "The sweetest soul who fills the house with joy, music, and divine blessings.", initials: "KR", photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Anirban Roy", relation: "Brother / Bhaiya", desc: "The dynamic brother, managing the chaos of the big day with flawless ease.", initials: "AR", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Shreya Roy", relation: "Bhabhi", desc: "The lovely bhabhi who brings charm, warmth, and beautiful designs to the family.", initials: "SR", photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Bimal Roy", relation: "Dada", desc: "The family patriarch whose stories of yesteryears and hearty laughter fill the house with joy.", initials: "BR", photo: "https://images.unsplash.com/photo-1489980508314-941910ded1f4?auto=format&fit=crop&w=150&h=150&q=80" },
+        { name: "Riya Roy", relation: "Sister", desc: "Super energetic cousin sister jo schedules aur sangeet rehearsals manage karti hai.", initials: "RR", photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&h=150&q=80" }
       ]
     }
   }
