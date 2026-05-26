@@ -31,7 +31,15 @@ function useGuestName() {
 function Index() {
   const guestName = useGuestName();
   const [opened, setOpened] = useState(false);
-  const [accepted, setAccepted] = useState(false);
+  
+  // Initialize accepted state to true if we are previewing accepted/submitted screens
+  const [accepted, setAccepted] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const p = new URLSearchParams(window.location.search).get("screen");
+      return p === "accepted" || p === "submitted";
+    }
+    return false;
+  });
 
   return (
     <LanguageProvider>
